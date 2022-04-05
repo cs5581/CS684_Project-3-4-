@@ -28,8 +28,8 @@ The Test Plan should be created to help the project's team members communicate m
 
   ### Project Description
   - This is web application and it is about News Feed.
-  - This application is designed for Sprint 2. 
-  - This is descriptive document called test plan which includes details about the planning of the Sprint 2. 
+  - This application is designed for Sprint 2 and Sprint 3 deliverable. 
+  - This is descriptive document called test plan which includes details about the planning of the Sprint 2 and Sprint 3 deliverable. 
   - The overall objective of this sprint to have users sign up/sign in to our website and view articles they are interested in.
   - Users will also be able to save their settings so they view thier preferred articles on the dashboard
 
