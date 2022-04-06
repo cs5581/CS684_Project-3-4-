@@ -1,5 +1,5 @@
 # CS684_Project-3-4-
-Sprint 3 and Sprint4
+Sprint 3 and Sprint 4
 
 # Team Stallions
   ## Team members
