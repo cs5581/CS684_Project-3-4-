@@ -84,18 +84,20 @@ The Test Plan should be created to help the project's team members communicate m
   - Upon signing in, the landing page will display articles for the "Home" link
   - The currently selected link (or tab) shall be highlighted. This is "Home" when first signed-in
   - The list of articles  will support pagination. You may choose the number of item displayed on each page.
+  - The Refresh Button on the Page allows the user to refresh the browser and loads new news from the News.Org
   
   ### Settings Page
   - Implement a form that will save the user’s preferences
-  - Allow the user to choose one or more of these categories
   - The form shall use a button, link, or image to submit 
   - There shall be at least one item selected
   - There shall be a button, link, or image to cancel the changes
   - When the user clicks Ok or Cancel, the app displays the landing page
+  - The categories Tab on the Setting Page, allows the user to select one or more categories from the list of categories. 
 
 ## Approach
 
   ### Integration Testing
+  - Integration testing is done to test the modules/components when integrated to verify that they work as expected i.e. to test the modules which are working fine individually does not have issues when integrated.
   
     
 ## Pass/Fail Criteria
