@@ -9,8 +9,8 @@ Team Stallions Assignment 2
 ||
 
 |<p>**Description:**</p><p>**Integration Testing: Conduct Testing to verify the Application is working without any defects.**</p><p>**We have followed the Top-down approach where we test several modules together and make sure the Test Cases are passing** </p>|
-
-
+| :- | :- |
+||
 
 |<p>**Pre-conditions:** </p><p>**Evaluate all happy/sad paths a user may encounter when traversing the GUI interface of the sign in/register/logout webpage** </p><p></p><p></p><p></p>|
 | :- |
