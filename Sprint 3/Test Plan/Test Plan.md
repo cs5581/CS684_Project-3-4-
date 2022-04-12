@@ -7,7 +7,7 @@
 - [Test Items](#test-items)
 - [Test Features](#test-features)
 - [Approach](#approach)
-  - [Unit Testing](#unit-testing)
+  - [Integration Testing](#integration-testing)
 - [Pass/Fail Criteria](#passfail-criteria)
 - [Testing Tasks](#testing-tasks)
 - [Responsibilities](#responsibilities)
