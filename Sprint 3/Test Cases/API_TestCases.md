@@ -20,9 +20,10 @@ API Test Actions :
 
 ## API TEST CASES 
 
-| Test Case ID | Testing Description | Test Result | 
-| ------------ | ------------------- | ----------- |
-| API_TC 01    |  | PASS |
-| API_TC 02    |  | PASS | 
-| API_TC 03    |  | PASS |
-| API_TC_04    |  | PASS | 
+| Test Scenario Category | Test Action Category | Test Action Description | Result | 
+| -----------------------| -------------------- | ----------------------- | -------|
+| Execute API call with valid required parameters  | Validate status code | 1. All requests should return 2XX HTTP status code 2. Returned status code is according to spec:  - 200 OK for GET requests - 201 for POST or PUT requests creating a new resource 200, 202, or 204 for a DELETE operation  | PASS |
+|                | Validate payload:  | 1. Response is a well-formed JSON object 2. Response structure is according to data model (schema validation: field names and field types are as expected, including nested objects; field values are as expected; non-nullable fields are not null, etc.) | PASS  | 
+|                | Validate state: | 1. For GET requests, verify there is NO STATE CHANGE in the system (idempotence) 2. For POST, DELETE, PATCH, PUT operations Ensure action has been performed correctly in the system by: Performing appropriate GET request and inspecting response Refreshing the UI in the web application and verifying new state (only applicable to manual testing) | PASS |
+|                | Validate headers:  | Verify that HTTP headers are as expected, including content-type, connection, cache-control, expires, access control-allow-origin, keep-alive, HSTS, and other standard header fields – according to spec.  | PASS | 
+
