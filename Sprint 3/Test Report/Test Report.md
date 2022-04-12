@@ -1,16 +1,16 @@
-||
-**Test Report:**
+﻿**Test Report:**
 
 Team Stallions Assignment 2
 
 
 |<p>**Test Case #: 1**</p><p></p><p>**System: Stallions News – Web App** </p><p></p><p>**Designed by: Erica Butts, Christopher**</p><p></p><p>**Executed by: Pooja Balaji, Preyasha Patel**</p>|<p>**Test Case Name: Integration Testing** </p><p></p><p>**Subsystem:** </p><p></p><p>**Design Date: 2/10/22**</p><p></p><p>**Execution Date: 2/18/22**</p><p></p><p></p>|
 | :- | :- |
-||
-
+|||
+|||
+|||
 |<p>**Description:**</p><p>**Integration Testing: Conduct Testing to verify the Application is working without any defects.**</p><p>**We have followed the Top-down approach where we test several modules together and make sure the Test Cases are passing** </p>|
-| :- | :- |
-||
+
+
 
 |<p>**Pre-conditions:** </p><p>**Evaluate all happy/sad paths a user may encounter when traversing the GUI interface of the sign in/register/logout webpage** </p><p></p><p></p><p></p>|
 | :- |
