@@ -98,6 +98,11 @@ The Test Plan should be created to help the project's team members communicate m
 
   ### Integration Testing
   - Integration testing is done to test the modules/components when integrated to verify that they work as expected i.e. to test the modules which are working fine individually does not have issues when integrated.
+  - When user is on landing page, user should be able to successfully navigate to login page and authenticate themselves as a valid user
+  - When user is authenticated, user should be able to navigate to settings page and edit their settings
+  - When user has selected preference of settings, settings should be able to be seen on user dashboard
+  - Logged in session should be able to successfully logout 
+  - These test examples should all return status code 200 if they successfully pass 
   
     
 ## Pass/Fail Criteria
