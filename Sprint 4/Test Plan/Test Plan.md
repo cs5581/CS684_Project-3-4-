@@ -103,7 +103,11 @@ The Test Plan should be created to help the project's team members communicate m
 ## Approach
 
   ### Regression Testing
-  
+  - Examine all of the reports that were introduced in prior editions. At the end of each sprint, regression testing will be added.
+  - Regression testing will cover all of the end-to-end functionality that has been built up to the current sprint.
+  - All test cases in the regression suite must be executed during each Regression cycle.
+  - From sprint 1 to sprint 4, system testing will be performed end to end for all of the functionality stated in the Test plan's scope.
+  - Manual test cases will be used for regression testing. 
    
 ## Pass/Fail Criteria
 - All the major functionality of the application should work as intended and the pass percentage of test cases should be more than 90%.
