@@ -7,6 +7,8 @@
 - [Test Items](#test-items)
 - [Test Features](#test-features)
 - [Approach](#approach)
+  - [Unit Testing](#unit-testing) 
+  - [Integration Testing](#integration-testing)
   - [Regression Testing](#regression-testing)
 - [Pass/Fail Criteria](#passfail-criteria)
 - [Testing Tasks](#testing-tasks)
@@ -98,9 +100,23 @@ The Test Plan should be created to help the project's team members communicate m
   - There shall be at least one item selected
   - There shall be a button, link, or image to cancel the changes
   - When the user clicks Ok or Cancel, the app displays the landing page
-  - The categories Tab on the Setting Page, allows the user to select one or more categories from the list of categories. 
+  - The categories Tab on the Setting Page, allows the user to select one or more categories from the list of categories
 
 ## Approach
+  ### Unit Testing
+  - For Test Driven Development, each functionality will be unit tested by creating unit test cases prior to development.
+  - Chai, a unit testing framework, will be used.
+  - In this model, each developer must first build a test that fails before launching innovative functional code that is tested individually against specific blocks, 
+    functions, procedures, or units of code.
+    
+  ### Integration Testing
+  - Integration testing is done to test the modules/components when integrated to verify that they work as expected i.e. to test the modules which are working fine   
+    individually does not have issues when integrated
+  - When user is on landing page, user should be able to successfully navigate to login page and authenticate themselves as a valid user
+  - When user is authenticated, user should be able to navigate to settings page and edit their settings
+  - When user has selected preference of settings, settings should be able to be seen on user dashboard
+  - Logged in session should be able to successfully logout
+  - These test examples should all return status code 200 if they successfully pass
 
   ### Regression Testing
   - Examine all of the reports that were introduced in prior editions. At the end of each sprint, regression testing will be added.
