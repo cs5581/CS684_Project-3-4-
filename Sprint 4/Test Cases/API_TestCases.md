@@ -1,29 +1,8 @@
-API Test Actions : 
-
-- Verify Correct HTTPS Code: creating a resource should return 201 CREATED and unpermitted requests should return 403 FORBIDDEN. 
-- Verify Response Payload: Check correct field names, types, and values — including in error responses.
-- Verify response headers: HTTP server headers have implications on both security and performance.
-- Verify correct application state: This is optional and applies mainly to manual testing, or when a UI or another interface can be easily inspected.  
-- Verify basic performance sanity: If an operation was completed successfully but took an unreasonable amount of time, the test fails. 
- 
-
-## API is the /users endpoint, which includes the following API calls: 
-| API Call | 	Action | 
-| -------- | ------- |
-| GET /users | 	List all users | 
-| GET /users?name={username} | 	Get user by username |
-| GET /users/{id} |	Get user by ID |
-| GET /users/{id}/configurations |	Get all configurations for user | 
-| POST /users/{id}/configurations |	Create a new configuration for user |
-| DELETE /users/{id}/configurations/{id} |	Delete configuration for user |
-| PATCH /users/{id}/configuration/{id}	| Update configuration for user |
-
-## API TEST CASES 
-
-| Test Scenario Category | Test Action Category | Test Action Description | Result | 
-| -----------------------| -------------------- | ----------------------- | -------|
-| Execute API call with valid required parameters  | Validate status code | 1. All requests should return 2XX HTTP status code 2. Returned status code is according to spec:  - 200 OK for GET requests - 201 for POST or PUT requests creating a new resource 200, 202, or 204 for a DELETE operation  | PASS |
-|                | Validate payload:  | 1. Response is a well-formed JSON object 2. Response structure is according to data model (schema validation: field names and field types are as expected, including nested objects; field values are as expected; non-nullable fields are not null, etc.) | PASS  | 
-|                | Validate state: | 1. For GET requests, verify there is NO STATE CHANGE in the system (idempotence) 2. For POST, DELETE, PATCH, PUT operations Ensure action has been performed correctly in the system by: Performing appropriate GET request and inspecting response Refreshing the UI in the web application and verifying new state (only applicable to manual testing) | PASS |
-|                | Validate headers:  | Verify that HTTP headers are as expected, including content-type, connection, cache-control, expires, access control-allow-origin, keep-alive, HSTS, and other standard header fields – according to spec.  | PASS | 
-
+| Test ID | Task | Pre-requisite | Description | Expected Output | Result | 
+|---------| ---- | ------------- | ----------- | --------------- | ------ |
+| API_1   | Test the Signup API  | 1. User's email is not registered in DB | 1. Start the POSTMAN 2. Set the Headers: Content-Type: application/json Accept: application/json 3. Body for raw:{"username":"", "email":"****@gmail.com", } 4. Method as POST: 5. URL http://localhost:3000/register | 1. A new record should be created in the Database with the details passed in the body of postman 2. Response Status: 200 | PASS |
+| API_2   | Test the Signup API  | 1. User's email is not registered in DB | 1. Start POSTMAN 2. Do not set up the headers 3. Body as blank 4. Method as GET URL http://localhost:3000/register | 1. This call should result in 400 Bad request. | PASS |
+| API_3   | Test the Signup API  | 1. User's email is not registered in DB | 1. Start the POSTMAN 2. Set the Headers: Content-Type: application/json Accept: application/json 3. Body for raw:{"username":"", "email":"****@gmail.com", } 4. Method as GET: 5. URL http://localhost:3000/register | 1. Response status: 200 success | PASS | 
+| API_4   | Test the Signup API  | 1. User's email is not registered in DB | 1. Start the POSTMAN 2. Do not set up the Headers 3. Body as blank 4. Method as GET 5. URL http://localhost:3000/register | 1. This call should result in 400 Bad request 2. User already exists | PASS | 
+| API_5   | Test the login API   | 1. User's email address already in DB   | 1. Start the POSTMAN 2. Set up Headers: Content-Type: application/json Accept: application/json 3. Body for raw:{} 4. Method POST 5. URL http://localhost:3000/login | 1. Response status: 200 Success | PASS |
+| API_6   | Test the login API   | 1. User's email address is not registered user | 1. Start the POSTMAN 2. Set up Headers : Content-type: application/json Accept: application/json 3. Body for raw:{} 4. Method as POST 5. URL http://localhost:3000/login | 1. This should result in 400 bad request | PASS | 
